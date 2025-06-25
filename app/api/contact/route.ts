@@ -6,7 +6,7 @@ export async function POST(request: NextRequest) {
     const formData = await request.json()
 
     // Crear el transportador SMTP
-    const transporter = nodemailer.createTransporter({
+    const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: parseInt(process.env.SMTP_PORT || '587'),
       secure: process.env.SMTP_SECURE === 'true',
@@ -14,6 +14,12 @@ export async function POST(request: NextRequest) {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
       },
+      tls: {
+        ciphers: 'SSLv3',
+        rejectUnauthorized: false,
+      },
+      debug: process.env.NODE_ENV === 'development',
+      logger: process.env.NODE_ENV === 'development',
     })
 
     // Formatear el contenido del mensaje
@@ -80,13 +86,11 @@ Fecha: ${new Date().toLocaleString('es-ES', {
     )
 
   } catch (error) {
-    console.error('Error enviando correo:', error)
-    
+
     return NextResponse.json(
       { 
         success: false, 
         message: 'Error al enviar el correo',
-        error: process.env.NODE_ENV === 'development' ? error : undefined
       },
       { status: 500 }
     )
