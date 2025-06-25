@@ -17,6 +17,7 @@ import { PrivacyPolicyModal } from "@/components/privacy-policy-modal"
 export default function AukanLanding() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const [formData, setFormData] = useState({
     nombre: "",
     apellido: "",
@@ -76,6 +77,7 @@ export default function AukanLanding() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setIsSubmitting(true)
 
     try {
       const response = await fetch("/api/contact", {
@@ -87,8 +89,9 @@ export default function AukanLanding() {
         body: JSON.stringify(formData),
       })
 
-      if (response.ok) {
-        const result = await response.json()
+      const result = await response.json()
+
+      if (response.ok && result.success) {
         alert("Gracias por tu interés. Nos pondremos en contacto contigo pronto.")
 
         // Reset form
@@ -108,11 +111,13 @@ export default function AukanLanding() {
           politicaPrivacidad: false,
         })
       } else {
-        throw new Error("Error al enviar el formulario")
+        throw new Error(result.message || "Error al enviar el formulario")
       }
     } catch (error) {
       console.error("Error:", error)
       alert("Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.")
+    } finally {
+      setIsSubmitting(false)
     }
   }
 
@@ -178,9 +183,8 @@ export default function AukanLanding() {
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden bg-aukan-dark-blue border-t border-aukan-gray-green transition-all duration-300 overflow-hidden ${
-            isMenuOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
-          }`}
+          className={`md:hidden bg-aukan-dark-blue border-t border-aukan-gray-green transition-all duration-300 overflow-hidden ${isMenuOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
+            }`}
         >
           <div className="container mx-auto px-4 py-4 space-y-4">
             <button
@@ -650,9 +654,10 @@ export default function AukanLanding() {
                 <FadeIn delay={1300}>
                   <Button
                     type="submit"
-                    className="w-full bg-aukan-lime-green text-aukan-dark-blue hover:bg-aukan-lime-green/90 rounded-xl py-3 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                    disabled={isSubmitting}
+                    className="w-full bg-aukan-lime-green text-aukan-dark-blue hover:bg-aukan-lime-green/90 rounded-xl py-3 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                   >
-                    Enviar Mensaje
+                    {isSubmitting ? 'Enviando...' : 'Enviar Mensaje'}
                   </Button>
                 </FadeIn>
               </form>
@@ -683,16 +688,16 @@ export default function AukanLanding() {
                   <div className="flex items-center transition-transform duration-300 hover:translate-x-2">
                     <Mail className="w-5 h-5 mr-2" />
                     <a
-                      href="mailto:info@aukanconsultores.com"
+                      href="mailto:contacto@aukan.com.ar"
                       className="text-slate-300 hover:text-white transition-colors duration-300"
                     >
-                      info@aukanconsultores.com
+                      contacto@aukan.com.ar
                     </a>
                   </div>
                   <div className="flex items-center transition-transform duration-300 hover:translate-x-2">
                     <Phone className="w-5 h-5 mr-2" />
                     <a
-                      href="mailto:info@aukanconsultores.com"
+                      href="https://api.whatsapp.com/send?phone=5492215250155"
                       className="text-slate-300 hover:text-white transition-colors duration-300"
                     >
                       WhatsApp
@@ -728,7 +733,7 @@ export default function AukanLanding() {
 
       {/* Floating Message Button */}
       <a
-        href="mailto:info@aukanconsultores.com"
+        href="mailto:contacto@aukan.com.ar"
         className="fixed bottom-6 right-6 bg-aukan-lime-green text-aukan-dark-blue p-4 rounded-full shadow-lg hover:bg-aukan-lime-green/90 transition-all duration-300 z-40 hover:scale-110"
         target="_blank"
         rel="noopener noreferrer"
