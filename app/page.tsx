@@ -738,6 +738,7 @@ export default function AukanLanding() {
         target="_blank"
         rel="noopener noreferrer"
       >
+        
         <Mail className="w-6 h-6" />
       </a>
     </div>
