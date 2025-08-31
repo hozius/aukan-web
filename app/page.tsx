@@ -531,26 +531,6 @@ export default function AukanLanding() {
                   </FadeIn>
                 </div>
 
-                <FadeIn delay={800}>
-                  <div className="mb-6">
-                    <label
-                      htmlFor="informacionAdicional"
-                      className="block text-sm font-medium text-aukan-gray-green mb-2"
-                    >
-                      ¿Hay alguna información adicional que te gustaría compartir de antemano sobre los desafíos,
-                      expectativas y necesidades de sostenibilidad de tu organización?
-                    </label>
-                    <Textarea
-                      id="informacionAdicional"
-                      name="informacionAdicional"
-                      rows={4}
-                      value={formData.informacionAdicional}
-                      onChange={handleInputChange}
-                      className="w-full transition-all duration-300 focus:scale-105"
-                    />
-                  </div>
-                </FadeIn>
-
                 <FadeIn delay={900}>
                   <div className="mb-6">
                     <label htmlFor="mensaje" className="block text-sm font-medium text-aukan-gray-green mb-2">

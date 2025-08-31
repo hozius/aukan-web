@@ -76,7 +76,7 @@ const solutions: Solution[] = [
     id: "auditorias-monitoreos",
     title: "Auditorías y Monitoreos Ambientales",
     description:
-      "Realizamos auditorías y monitoreos ambientales de acuerdo con la Disp. 123/06 y Res. 785/05 SEN, asegurando la adhesión a los estándares ambientales y legales.",
+      "Realizamos auditorías y monitoreos ambientales de acuerdo con la Disp. 123/06, asegurando la adhesión a los estándares ambientales y legales.",
     icon: Search,
     category: "environmental",
     delay: 600,

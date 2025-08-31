@@ -374,13 +374,6 @@ export default function AdminPanel() {
                           </p>
                         )}
                       </div>
-                      <div>
-                        {form.informacion_adicional && (
-                          <div className="mb-4">
-                            <strong>Información adicional:</strong>
-                            <p className="text-sm text-gray-600">{form.informacion_adicional}</p>
-                          </div>
-                        )}
                         {form.mensaje && (
                           <div>
                             <strong>Mensaje:</strong>

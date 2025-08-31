@@ -35,10 +35,6 @@ País: ${formData.pais}
 ${formData.codigoArea ? `Código de Área: ${formData.codigoArea}` : ''}
 ${formData.numero ? `Número: ${formData.numero}` : ''}
 
-INFORMACIÓN ADICIONAL:
-━━━━━━━━━━━━━━━━━━━━━━━━━━
-${formData.informacionAdicional || 'No se proporcionó información adicional'}
-
 MENSAJE:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
 ${formData.mensaje || 'No se proporcionó mensaje adicional'}
