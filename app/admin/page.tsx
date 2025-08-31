@@ -30,7 +30,6 @@ interface ContactForm {
   pais: string
   codigo_area?: string
   numero?: string
-  informacion_adicional?: string
   mensaje?: string
   fecha_cita_sugerida?: string
   hora_cita_sugerida?: string
@@ -374,6 +373,7 @@ export default function AdminPanel() {
                           </p>
                         )}
                       </div>
+                      <div>
                         {form.mensaje && (
                           <div>
                             <strong>Mensaje:</strong>
