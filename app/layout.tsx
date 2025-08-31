@@ -6,7 +6,7 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "AUKAN Consultores - Sostenibilidad y Huella de Carbono",
+  title: "AUKAN Sustentable - Sostenibilidad y Huella de Carbono",
   description:
     "Transformando desafíos en oportunidades sostenibles. Consultoría especializada en medición y gestión de huella de carbono para el sector energético.",
     generator: 'v0.dev'

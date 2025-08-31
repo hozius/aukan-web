@@ -37,7 +37,7 @@ export function Logo({ className, width = 200, height = 80, variant = "default",
     >
       <Image
         src="/logo-aukan-white.png"
-        alt="AUKAN Consultores - Sostenibilidad y Huella de Carbono"
+        alt="AUKAN Sustentable - Sostenibilidad y Huella de Carbono"
         width={width}
         height={height}
         className={getImageClasses()}

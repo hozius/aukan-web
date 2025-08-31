@@ -616,7 +616,7 @@ export default function AukanLanding() {
                         className="mr-2 mt-1 transition-transform duration-300 hover:scale-110"
                       />
                       <label htmlFor="politicaPrivacidad" className="text-sm text-aukan-gray-green">
-                        Al enviar este formulario, aceptas que AUKAN Consultores pueda almacenar y procesar tus datos
+                        Al enviar este formulario, aceptas que AUKAN Sustentable pueda almacenar y procesar tus datos
                         personales como se describe en nuestra{" "}
                         <button
                           type="button"
@@ -692,7 +692,7 @@ export default function AukanLanding() {
             <div className="border-t border-aukan-gray-green pt-6">
               <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                 <p className="text-slate-300 text-center md:text-left">
-                  &copy; {new Date().getFullYear()} AUKAN Consultores. Todos los derechos reservados.
+                  &copy; {new Date().getFullYear()} AUKAN Sustentable. Todos los derechos reservados.
                 </p>
                 <div className="flex space-x-6">
                   <button
