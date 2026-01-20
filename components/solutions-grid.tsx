@@ -16,6 +16,8 @@ import {
 } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { FadeIn } from "@/components/animations"
+import { useLanguage } from "@/context/LanguageContext"
+import { getTranslation } from "@/lib/translations"
 
 interface Solution {
   id: string
@@ -29,63 +31,56 @@ interface Solution {
 const solutions: Solution[] = [
   {
     id: "medicion-huella",
-    title: "Medición de Huella de Carbono Organizacional",
-    description:
-      "Realizamos el inventario de GEI (gases de efecto invernadero) de acuerdo a la norma ISO 14064, asegurando el cumplimiento normativo (ej. Res. 258/2025 Neuquén, Res. 001/2025 Mendoza) y facilitando un reporte transparente.",
+    title: "solutionsGrid.medicionHuella.title",
+    description: "solutionsGrid.medicionHuella.description",
     icon: BarChart3,
     category: "carbon",
     delay: 100,
   },
   {
     id: "analisis-ciclo-vida",
-    title: "Análisis de Ciclo de Vida (ACV)",
-    description:
-      "Identificamos los impactos ambientales a lo largo de la vida de un producto o servicio, siguiendo la norma ISO 14067 y las mejores prácticas de ACV para una visión completa.",
+    title: "solutionsGrid.analisisCicloVida.title",
+    description: "solutionsGrid.analisisCicloVida.description",
     icon: Recycle,
     category: "carbon",
     delay: 200,
   },
   {
     id: "estrategias-reduccion",
-    title: "Estrategias de reducción de emisiones",
-    description:
-      "Identificamos oportunidades de eficiencia energética, optimización de procesos y uso de energías limpias. Definimos metas de reducción y compensación estratégicas para la compañía.",
+    title: "solutionsGrid.estrategiasReduccion.title",
+    description: "solutionsGrid.estrategiasReduccion.description",
     icon: TrendingDown,
     category: "carbon",
     delay: 300,
   },
   {
     id: "capacitacion",
-    title: "Capacitación y acompañamiento",
-    description:
-      "Ofrecemos talleres y cursos sobre gestión de GEI y eficiencia energética para tus equipos, y te acompañamos en los procesos de verificación y certificación.",
+    title: "solutionsGrid.capacitacion.title",
+    description: "solutionsGrid.capacitacion.description",
     icon: GraduationCap,
     category: "carbon",
     delay: 400,
   },
   {
     id: "estudios-impacto",
-    title: "Estudios de Impacto Ambiental (EIA)",
-    description:
-      "Desarrollamos evaluaciones completas para proyectos como la instalación y reemplazo de ductos y nuevas instalaciones, garantizando el cumplimiento legal ambiental.",
+    title: "solutionsGrid.estudiosImpacto.title",
+    description: "solutionsGrid.estudiosImpacto.description",
     icon: FileText,
     category: "environmental",
     delay: 500,
   },
   {
     id: "auditorias-monitoreos",
-    title: "Auditorías y Monitoreos Ambientales",
-    description:
-      "Realizamos auditorías y monitoreos ambientales de acuerdo con la Disp. 123/06 y Res. 785/05 SEN, asegurando la adhesión a los estándares ambientales y legales.",
+    title: "solutionsGrid.auditoriasMonitoreos.title",
+    description: "solutionsGrid.auditoriasMonitoreos.description",
     icon: Search,
     category: "environmental",
     delay: 600,
   },
   {
     id: "estudios-especificos",
-    title: "Estudios específicos",
-    description:
-      "Llevamos a cabo estudios de agua y suelo, caracterizaciones ambientales y toma de muestras para Líneas de Base Ambiental y pedidos específicos.",
+    title: "solutionsGrid.estudiosEspecificos.title",
+    description: "solutionsGrid.estudiosEspecificos.description",
     icon: Microscope,
     category: "environmental",
     delay: 700,
@@ -94,6 +89,8 @@ const solutions: Solution[] = [
 
 export function SolutionsGrid() {
   const [expandedCards, setExpandedCards] = useState<Set<string>>(new Set())
+  const { language } = useLanguage()
+  const t = (key: string) => getTranslation(language, key)
 
   const toggleCard = (id: string) => {
     const newExpanded = new Set(expandedCards)
@@ -155,7 +152,7 @@ export function SolutionsGrid() {
                       />
                     </div>
                     <h3 className="text-base font-bold text-aukan-dark-blue group-hover:text-aukan-gray-green transition-colors duration-300 leading-tight text-center flex-1">
-                      {solution.title}
+                      {t(solution.title)}
                     </h3>
                   </div>
                   <div
@@ -183,7 +180,7 @@ export function SolutionsGrid() {
                 {/* Content Area */}
                 {isExpanded && (
                   <div className="w-full">
-                    <p className="text-gray-600 leading-relaxed text-justify text-sm px-2">{solution.description}</p>
+                    <p className="text-gray-600 leading-relaxed text-justify text-sm px-2">{t(solution.description)}</p>
                   </div>
                 )}
               </div>
