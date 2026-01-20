@@ -183,6 +183,7 @@ export default function Page() {
             </button>
           </div>
 
+
           {/* Mobile Menu */}
           <div
             className={`md:hidden bg-aukan-dark-blue border-t border-aukan-gray-green transition-all duration-300 overflow-hidden ${isMenuOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
@@ -525,25 +526,6 @@ export default function Page() {
                     </FadeIn>
                   </div>
 
-                  <FadeIn delay={800}>
-                    <div className="mb-6">
-                      <label
-                        htmlFor="informacionAdicional"
-                        className="block text-sm font-medium text-aukan-gray-green mb-2"
-                      >
-                        {t("contact.additionalInfo")}
-                      </label>
-                      <Textarea
-                        id="informacionAdicional"
-                        name="informacionAdicional"
-                        rows={4}
-                        value={formData.informacionAdicional}
-                        onChange={handleInputChange}
-                        className="w-full transition-all duration-300 focus:scale-105"
-                      />
-                    </div>
-                  </FadeIn>
-
                   <FadeIn delay={900}>
                     <div className="mb-6">
                       <label htmlFor="mensaje" className="block text-sm font-medium text-aukan-gray-green mb-2">
@@ -704,7 +686,7 @@ export default function Page() {
               <div className="border-t border-aukan-gray-green pt-6">
                 <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                   <p className="text-slate-300 text-center md:text-left">
-                    &copy; {new Date().getFullYear()} AUKAN Consultores. Todos los derechos reservados.
+                    &copy; {new Date().getFullYear()} AUKAN Sustentable. Todos los derechos reservados.
                   </p>
                   <div className="flex space-x-6">
                     <button
@@ -733,7 +715,7 @@ export default function Page() {
 
           <Mail className="w-6 h-6" />
         </a>
-      </div>
-    </div>
+      </div >
+    </div >
   )
 }

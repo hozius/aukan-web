@@ -36,7 +36,7 @@ export function PrivacyPolicyModal({ isOpen, onClose }: PrivacyPolicyModalProps)
               <div>
                 <h3 className="text-xl font-semibold text-aukan-dark-blue mb-3">1. Información que Recopilamos</h3>
                 <p className="text-justify">
-                  En AUKAN Consultores recopilamos información personal que usted nos proporciona voluntariamente a
+                  En AUKAN Sustentable recopilamos información personal que usted nos proporciona voluntariamente a
                   través de nuestros formularios de contacto, incluyendo nombre, apellido, organización, correo
                   electrónico, país, número de teléfono y cualquier información adicional que decida compartir con
                   nosotros.
@@ -82,7 +82,7 @@ export function PrivacyPolicyModal({ isOpen, onClose }: PrivacyPolicyModalProps)
                 <p className="text-justify">
                   Usted tiene derecho a acceder, rectificar, eliminar o limitar el procesamiento de sus datos
                   personales. También puede retirar su consentimiento en cualquier momento. Para ejercer estos derechos,
-                  contáctenos a través de info@aukanconsultores.com.
+                  contáctenos a través de contacto@aukan.com.ar.
                 </p>
               </div>
             </FadeIn>
@@ -124,7 +124,7 @@ export function PrivacyPolicyModal({ isOpen, onClose }: PrivacyPolicyModalProps)
                 <h3 className="text-xl font-semibold text-aukan-dark-blue mb-3">9. Contacto</h3>
                 <p className="text-justify">
                   Si tiene preguntas sobre esta Política de Privacidad o sobre el tratamiento de sus datos personales,
-                  puede contactarnos en info@aukanconsultores.com.
+                  puede contactarnos en contacto@aukan.com.ar.
                 </p>
               </div>
             </FadeIn>

@@ -47,7 +47,7 @@ export const translations = {
       suggestedDate: "Fecha de cita sugerida (opcional)",
       suggestedTime: "Hora de cita sugerida (opcional)",
       newsletter: "Me quiero suscribir al newsletter",
-      privacy: "Al enviar este formulario, aceptas que AUKAN Consultores pueda almacenar y procesar tus datos personales como se describe en nuestra",
+      privacy: "Al enviar este formulario, aceptas que AUKAN Sustentable pueda almacenar y procesar tus datos personales como se describe en nuestra",
       privacyPolicy: "Política de Privacidad",
       send: "Enviar",
       required: "campos requeridos",
@@ -81,7 +81,7 @@ export const translations = {
       },
       auditoriasMonitoreos: {
         title: "Auditorías y Monitoreos Ambientales",
-        description: "Realizamos auditorías y monitoreos ambientales de acuerdo con la Disp. 123/06 y Res. 785/05 SEN, asegurando la adhesión a los estándares ambientales y legales."
+        description: "Realizamos auditorías y monitoreos ambientales de acuerdo con la Disp. 123/06, asegurando la adhesión a los estándares ambientales y legales."
       },
       estudiosEspecificos: {
         title: "Estudios específicos",

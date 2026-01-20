@@ -36,7 +36,7 @@ INSERT INTO solutions (title, description, category, services, display_order, is
         },
         {
             "name": "Auditorías y Monitoreos Ambientales",
-            "description": "Realizamos auditorías y monitoreos ambientales de acuerdo con la Disp. 123/06 y Res. 785/05 SEN, asegurando la adhesión a los estándares ambientales y legales."
+            "description": "Realizamos auditorías y monitoreos ambientales de acuerdo con la Disp. 123/06, asegurando la adhesión a los estándares ambientales y legales."
         },
         {
             "name": "Estudios específicos",
@@ -49,4 +49,4 @@ INSERT INTO solutions (title, description, category, services, display_order, is
 
 -- Crear usuario administrador por defecto (password: admin123)
 INSERT INTO admin_users (name, email, password_hash, role) VALUES 
-('Administrador', 'admin@aukanconsultores.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin');
+('Administrador', 'contacto@aukan.com.ar', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin');
