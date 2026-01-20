@@ -52,10 +52,33 @@ export const translations = {
       send: "Enviar",
       required: "campos requeridos",
     },
+    privacyPolicy: {
+      title: "Política de Privacidad",
+      section1Title: "1. Información que Recopilamos",
+      section1Content: "En AUKAN Sustentable recopilamos información personal que usted nos proporciona voluntariamente a través de nuestros formularios de contacto, incluyendo nombre, apellido, organización, correo electrónico, país, número de teléfono y cualquier información adicional que decida compartir con nosotros.",
+      section2Title: "2. Uso de la Información",
+      section2Content: "Utilizamos su información personal para: responder a sus consultas y solicitudes, programar citas y reuniones, enviar información sobre nuestros servicios (solo si se suscribe a nuestro newsletter), mejorar nuestros servicios y cumplir con obligaciones legales aplicables.",
+      section3Title: "3. Protección de Datos",
+      section3Content: "Implementamos medidas de seguridad técnicas y organizativas apropiadas para proteger su información personal contra acceso no autorizado, alteración, divulgación o destrucción. Sus datos se almacenan de forma segura y solo son accesibles por personal autorizado.",
+      section4Title: "4. Compartir Información",
+      section4Content: "No vendemos, intercambiamos o transferimos su información personal a terceros sin su consentimiento, excepto cuando sea necesario para proporcionar nuestros servicios o cuando lo requiera la ley.",
+      section5Title: "5. Sus Derechos",
+      section5Content: "Usted tiene derecho a acceder, rectificar, eliminar o limitar el procesamiento de sus datos personales. También puede retirar su consentimiento en cualquier momento. Para ejercer estos derechos, contáctenos a través de contacto@aukan.com.ar.",
+      section6Title: "6. Retención de Datos",
+      section6Content: "Conservamos su información personal solo durante el tiempo necesario para cumplir con los propósitos para los cuales fue recopilada, o según lo requieran las obligaciones legales aplicables.",
+      section7Title: "7. Cookies y Tecnologías Similares",
+      section7Content: "Nuestro sitio web puede utilizar cookies y tecnologías similares para mejorar su experiencia de navegación. Estas tecnologías nos ayudan a recordar sus preferencias y analizar el uso de nuestro sitio web.",
+      section8Title: "8. Cambios en la Política",
+      section8Content: "Nos reservamos el derecho de actualizar esta Política de Privacidad en cualquier momento. Los cambios serán efectivos inmediatamente después de su publicación en nuestro sitio web. Le recomendamos revisar periódicamente esta política.",
+      section9Title: "9. Contacto",
+      section9Content: "Si tiene preguntas sobre esta Política de Privacidad o sobre el tratamiento de sus datos personales, puede contactarnos en contacto@aukan.com.ar.",
+      lastUpdated: "Ultima edición:",
+      closeButton: "Entendido"
+    },
     footer: {
       contact: "Contacto",
       email: "Correo",
-      allRights: "Todos los derechos reservados.",
+      copyright: "Todos los derechos reservados.",
       privacy: "Política de Privacidad",
     },
     solutionsGrid: {
@@ -86,6 +109,20 @@ export const translations = {
       estudiosEspecificos: {
         title: "Estudios específicos",
         description: "Llevamos a cabo estudios de agua y suelo, caracterizaciones ambientales y toma de muestras para Líneas de Base Ambiental y pedidos específicos."
+      }
+    },
+    industryIcons: {
+      oilGas: {
+        title: "Oil & Gas Upstream y Downstream",
+        description: "Exploración, extracción, refinación y distribución de hidrocarburos"
+      },
+      renewable: {
+        title: "Parques Eólicos y Solares",
+        description: "Energías renovables y proyectos de generación limpia"
+      },
+      hydrogen: {
+        title: "Producción de Hidrógeno Verde y Derivados",
+        description: "Tecnologías de hidrógeno y combustibles del futuro"
       }
     }
   },
@@ -140,6 +177,20 @@ export const translations = {
         description: "We carry out water and soil studies, environmental characterizations, and sampling for Environmental Baselines and specific requests."
       }
     },
+    industryIcons: {
+      oilGas: {
+        title: "Oil & Gas Upstream and Downstream",
+        description: "Hydrocarbon exploration, extraction, refining, and distribution"
+      },
+      renewable: {
+        title: "Wind and Solar Parks",
+        description: "Renewable energy and clean generation projects"
+      },
+      hydrogen: {
+        title: "Green Hydrogen Production and Derivatives",
+        description: "Future hydrogen technologies and fuels"
+      }
+    },
     valueProposal: {
       title: "Our Value Proposition",
       description: "Four fundamental pillars that guarantee the success of your sustainability strategy and ensure measurable results in your transformation towards more responsible and efficient operations.",
@@ -167,15 +218,38 @@ export const translations = {
       suggestedDate: "Suggested meeting date (optional)",
       suggestedTime: "Suggested time (optional)",
       newsletter: "I want to subscribe to the newsletter",
-      privacy: "By submitting this form, you agree that AUKAN Consultores may store and process your personal data as described in our",
+      privacy: "By submitting this form, you agree that AUKAN Sustentable may store and process your personal data as described in our",
       privacyPolicy: "Privacy Policy",
       send: "Send",
       required: "required fields",
     },
+    privacyPolicy: {
+      title: "Privacy Policy",
+      section1Title: "1. Information We Collect",
+      section1Content: "At AUKAN Sustentable we collect personal information that you voluntarily provide to us through our contact forms, including first name, last name, organization, email, country, phone number, and any additional information you choose to share with us.",
+      section2Title: "2. Use of Information",
+      section2Content: "We use your personal information to: respond to your inquiries and requests, schedule appointments and meetings, send information about our services (only if you subscribe to our newsletter), improve our services, and comply with applicable legal obligations.",
+      section3Title: "3. Data Protection",
+      section3Content: "We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. Your data is stored securely and is only accessible by authorized personnel.",
+      section4Title: "4. Sharing Information",
+      section4Content: "We do not sell, trade, or transfer your personal information to third parties without your consent, except when necessary to provide our services or when required by law.",
+      section5Title: "5. Your Rights",
+      section5Content: "You have the right to access, rectify, delete, or limit the processing of your personal data. You can also withdraw your consent at any time. To exercise these rights, contact us at contacto@aukan.com.ar.",
+      section6Title: "6. Data Retention",
+      section6Content: "We retain your personal information only for as long as necessary to fulfill the purposes for which it was collected, or as required by applicable legal obligations.",
+      section7Title: "7. Cookies and Similar Technologies",
+      section7Content: "Our website may use cookies and similar technologies to improve your browsing experience. These technologies help us remember your preferences and analyze the use of our website.",
+      section8Title: "8. Changes to Policy",
+      section8Content: "We reserve the right to update this Privacy Policy at any time. Changes will be effective immediately upon posting on our website. We recommend reviewing this policy periodically.",
+      section9Title: "9. Contact",
+      section9Content: "If you have questions about this Privacy Policy or the processing of your personal data, you can contact us at contacto@aukan.com.ar.",
+      lastUpdated: "Last updated:",
+      closeButton: "Understood"
+    },
     footer: {
       contact: "Contact",
       email: "Email",
-      allRights: "All rights reserved.",
+      copyright: "All rights reserved.",
       privacy: "Privacy Policy",
     },
   },

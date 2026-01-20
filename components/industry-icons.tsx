@@ -2,32 +2,37 @@
 
 import { Wind, Droplets, Zap } from "lucide-react"
 import { FadeIn } from "@/components/animations"
+import { useLanguage } from "@/context/LanguageContext"
+import { getTranslation } from "@/lib/translations"
 
 const industries = [
   {
     id: "oil-gas",
-    title: "Oil & Gas Upstream y Downstream",
+    title: "industryIcons.oilGas.title",
     icon: Droplets,
     delay: 100,
-    description: "Exploración, extracción, refinación y distribución de hidrocarburos",
+    description: "industryIcons.oilGas.description",
   },
   {
     id: "renewable",
-    title: "Parques Eólicos y Solares",
+    title: "industryIcons.renewable.title",
     icon: Wind,
     delay: 200,
-    description: "Energías renovables y proyectos de generación limpia",
+    description: "industryIcons.renewable.description",
   },
   {
     id: "hydrogen",
-    title: "Producción de Hidrógeno Verde y Derivados",
+    title: "industryIcons.hydrogen.title",
     icon: Zap,
     delay: 300,
-    description: "Tecnologías de hidrógeno y combustibles del futuro",
+    description: "industryIcons.hydrogen.description",
   },
 ]
 
 export function IndustryIcons() {
+  const { language } = useLanguage()
+  const t = (key: string) => getTranslation(language, key)
+
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 lg:gap-12 my-8 md:my-12 px-4 sm:px-0">
       {industries.map((industry) => {
@@ -55,12 +60,12 @@ export function IndustryIcons() {
 
               {/* Title */}
               <h3 className="text-base sm:text-lg lg:text-xl font-bold text-aukan-dark-blue mb-2 md:mb-3 transition-colors duration-300 group-hover:text-aukan-lime-green px-2">
-                {industry.title}
+                {t(industry.title)}
               </h3>
 
               {/* Description */}
               <p className="text-xs sm:text-sm text-aukan-gray-green leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0 px-2">
-                {industry.description}
+                {t(industry.description)}
               </p>
             </div>
           </FadeIn>

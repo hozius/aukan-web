@@ -657,7 +657,7 @@ export default function Page() {
 
               <FadeIn delay={200}>
                 <div>
-                  <h3 className="text-xl font-bold mb-4">Contacto</h3>
+                  <h3 className="text-xl font-bold mb-4">{t("footer.contact")}</h3>
                   <div className="space-y-2">
                     <div className="flex items-center transition-transform duration-300 hover:translate-x-2">
                       <Mail className="w-5 h-5 mr-2" />
@@ -686,14 +686,14 @@ export default function Page() {
               <div className="border-t border-aukan-gray-green pt-6">
                 <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                   <p className="text-slate-300 text-center md:text-left">
-                    &copy; {new Date().getFullYear()} AUKAN Sustentable. Todos los derechos reservados.
+                    &copy; {new Date().getFullYear()} AUKAN Sustentable. {t("footer.copyright")}
                   </p>
                   <div className="flex space-x-6">
                     <button
                       onClick={openPrivacyModal}
                       className="text-slate-300 hover:text-white transition-colors duration-300 text-sm underline"
                     >
-                      Política de Privacidad
+                      {t("footer.privacy")}
                     </button>
                   </div>
                 </div>
