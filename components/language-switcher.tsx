@@ -2,12 +2,16 @@
 
 import { useLanguage } from "@/context/LanguageContext"
 import { Button } from "@/components/ui/button"
+import { Globe } from "lucide-react"
 
 export function LanguageSwitcher() {
   const { language, setLanguage } = useLanguage()
 
   return (
     <div className="flex items-center gap-2 bg-gradient-to-r from-slate-100 to-slate-50 rounded-full p-1 border border-slate-200">
+      <div className="pl-2">
+        <Globe className="w-6 h-6 text-aukan-dark-blue" />
+      </div>
       <Button
         variant={language === "es" ? "default" : "ghost"}
         size="sm"

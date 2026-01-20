@@ -169,7 +169,7 @@ export default function Page() {
                 {t("header.contacto")}
               </Button>
               {/* Language Switcher */}
-              <div className="ml-4 border-l border-slate-400 pl-4">
+              <div className="ml-8 border-l border-slate-400 pl-8">
                 <LanguageSwitcher />
               </div>
             </nav>

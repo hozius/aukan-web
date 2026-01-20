@@ -183,7 +183,7 @@ export const translations = {
         description: "Hydrocarbon exploration, extraction, refining, and distribution"
       },
       renewable: {
-        title: "Wind and Solar Parks",
+        title: "Wind and Solar Farm",
         description: "Renewable energy and clean generation projects"
       },
       hydrogen: {
