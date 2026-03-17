@@ -41,7 +41,24 @@ export default function Page() {
   useEffect(() => {
     setMounted(true)
   }, [])
+//Manenimiento inicio
+  const maintenanceMode = true
 
+  if (!mounted) {
+    return null
+  }
+
+  if (maintenanceMode) {
+    return (
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center p-8">
+        <div className="max-w-xl text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">Sitio en contrucción</h1>
+          <p className="text-lg md:text-xl text-slate-200"></p>
+        </div>
+      </div>
+    )
+  }
+//Manenimiento fin
   const scrollToSection = (sectionId: any) => {
     const element = document.getElementById(sectionId)
     if (element) {
